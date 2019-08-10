@@ -1,10 +1,10 @@
 var Word = require("./word.js");
 var inquirer = require("inquirer");
 
-// letters entry
+// create an arrry for letters
 var letterArray = "abcdefghijklmnopqrstuvwxyz";
 
-// List of words to choose from
+// create list of words to choose from
 var months = [
   "january",
   "february",
@@ -71,7 +71,8 @@ function theLogic() {
         ) {
           console.log("\nPlease try again!\n");
           theLogic();
-        } else {
+        }
+        else {
           if (
             incorrectLetters.includes(input.userinput) ||
             correctLetters.includes(input.userinput) ||
@@ -79,7 +80,8 @@ function theLogic() {
           ) {
             console.log("\nAlready Guessed or Nothing Entered\n");
             theLogic();
-          } else {
+          }
+          else {
             // Checks if guess is correct
             var wordCheckArray = [];
 
@@ -92,7 +94,8 @@ function theLogic() {
 
               incorrectLetters.push(input.userinput);
               guessesLeft--;
-            } else {
+            }
+            else {
               console.log("\nCorrect!\n");
 
               correctLetters.push(input.userinput);
@@ -112,7 +115,8 @@ function theLogic() {
             if (guessesLeft > 0) {
               // Call function
               theLogic();
-            } else {
+            }
+            else {
               console.log("Sorry, you lose!\n");
 
               restartGame();
@@ -124,7 +128,8 @@ function theLogic() {
           }
         }
       });
-  } else {
+  }
+  else {
     console.log("YOU WIN!\n");
 
     restartGame();
@@ -140,7 +145,7 @@ function restartGame() {
     .prompt([
       {
         type: "list",
-        message: "Would you like to:",
+        message: "what would like to do next?:",
         choices: ["Play Again", "Exit"],
         name: "restart"
       }
@@ -152,7 +157,8 @@ function restartGame() {
         correctLetters = [];
         guessesLeft = 10;
         theLogic();
-      } else {
+      }
+      else {
         return;
       }
     });
