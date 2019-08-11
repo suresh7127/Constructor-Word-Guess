@@ -4,6 +4,10 @@ Advanced JavaScript Assignment:<br>
 <br>
 This Constructor-word-guess utilizes three Javascript files: <br>
 1.Letter.js:<br>
-The letter.js file holds a constructor for letters in word., one to hold the constructor for a word object consisting of letter objects, and the main file (index.js) which utilizes the Inquirer NPM to get input. The program will pick a word at random out of the word bank and the user must guess the letters in the word (only letters, no special characters or numbers). If correct, the user continues guessing. If the guess is wrong, the user will lose an attempt (starting from 10). The game will let the user know if the word is fully guessed or if the number of incorrect guesses have been used up. Either way, the correct word will be known and the user will be asked if they want to play again. If so, a new word is chosen and the game begins anew. Otherwise, the program ends.
+The letter.js file holds a constructor for letters in word.<br> 
+2.word.js:<br>
+The word.js file holds the constructor for word object consisting of letter objects.<br>
+3.Index.js:<br>
+The index.js file holds the logic for the game.It utilizes the Inquirer NPM to get input. The program will pick a word at random out of months array and the user must guess the letters in the word.The game progress if the user keep guessing the correct letters. If the user guess a wrong letter,he/she will will lose an attempt. The user will be given a total of 10 attemps to finish the game. The game will count both the wrong or wright letters and update the user. Whether the user win or loose, he/she will be given another chance either to restart or exit out of the game. If the user decided to play again, the game will restart otherwise it will exit out of the game.
 
 
