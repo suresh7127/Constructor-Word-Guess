@@ -1,5 +1,4 @@
 # Constructor-Word-Guess
 Advanced JavaScript Assignment:
-<br>
-![Image of Constructor
-https://github.com/suresh7127/Constructor-Word-Guess/blob/master/suresh13.jpg]
+![Image of Constructor]
+(https://octodex.github.com/images/suresh13.jpg)
