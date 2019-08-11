@@ -44,13 +44,13 @@ function theLogic() {
     var randomIndex = Math.floor(Math.random() * months.length);
     var randomWord = months[randomIndex];
 
-    // Passes random word through the Word constructor
+    // Pass random word through the Word constructor
     computerWord = new Word(randomWord);
 
     requireNewWord = false;
   }
 
-  // TestS if a letter guessed is correct
+  // Test if a letter guessed is correct
   var wordComplete = [];
   computerWord.objArray.forEach(completeCheck);
 
@@ -69,7 +69,7 @@ function theLogic() {
           !letterArray.includes(input.userinput) ||
           input.userinput.length > 1
         ) {
-          console.log("\nPlease try again!\n");
+          console.log("\nWrong letter, guess again!\n");
           theLogic();
         }
         else {
@@ -78,7 +78,7 @@ function theLogic() {
             correctLetters.includes(input.userinput) ||
             input.userinput === ""
           ) {
-            console.log("\nAlready Guessed or Nothing Entered\n");
+            console.log("\nPreviously guessed letter\n");
             theLogic();
           }
           else {
@@ -117,7 +117,7 @@ function theLogic() {
               theLogic();
             }
             else {
-              console.log("Sorry, you lose!\n");
+              console.log("Loser!\n");
 
               restartGame();
             }
